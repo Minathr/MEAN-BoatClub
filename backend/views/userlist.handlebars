@@ -1,0 +1,28 @@
+<h2 class="page-header">Users List</h2>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Address</th>
+        <th>Creation Date</th>
+    </tr>
+    {{#each user}}
+        <tr>
+            <td headers="name">{{this.username}}</td>
+            <td headers="name">{{this.password}}</td>
+            <td headers="name">{{this.email}}</td>
+            <td headers="name">{{this.firstname}} {{this.lastname}}</td>
+            <td headers="name">{{this.role}}</td>
+            <td headers="name">
+                {{this.address.street}}<br>
+                {{this.address.postalcode}}<br>
+                {{this.address.city}} {{this.address.province}} {{this.address.country}}<br>
+            </td>
+            <td headers="name">{{this.creationdate}}</td>
+        </tr>
+    {{/each}}
+</table>
+<a href="/admin">Back to admin's dashboard</a>

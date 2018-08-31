@@ -1,0 +1,31 @@
+{
+  "name": "loginapp",
+  "version": "1.0.0",
+  "description": "A simple auth system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Medhat Elmasry",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  }
+}

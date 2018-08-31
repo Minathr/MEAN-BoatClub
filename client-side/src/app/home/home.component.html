@@ -1,0 +1,27 @@
+<div class="col-md-6 col-md-offset-3 container">
+    <h1 class="text-center">Hi {{currentUser.firstname}}!</h1>
+
+    <div *ngIf="currentUser.role == 'admin'">
+        <a href="{{apiUrl}}/users/login">You can access to Admin Dashboard through this link.</a>
+    </div>
+
+    <p class="text-center">This is the list of all available boats at The Pacific Boat.</p>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Boat</th>
+            <th>Length in Feet</th>
+            <th>Year</th>
+            <th>Capacity</th>
+        </tr>
+            <tr *ngFor="let boat of boats">
+                <td style="padding-right: 50px; padding-bottom: 20px;"><img src="{{boat.boatpictureurl}}" width="50px"></td>
+                <td style="padding-right: 50px;padding-bottom: 20px;">{{boat.boatname}}</td>
+                <td style="padding-right: 50px;padding-bottom: 20px;">{{boat.boatlengthinfeet}}</td>
+                <td style="padding-right: 50px;padding-bottom: 20px;">{{boat.boatyear}}</td>
+                <td style="padding-right: 50px;padding-bottom: 20px;">{{boat.boatcapacityinpeople}}</td>
+            </tr>
+        
+    </table>
+   
+</div>

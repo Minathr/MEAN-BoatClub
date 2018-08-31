@@ -1,0 +1,26 @@
+<h2 class="page-header">Boat List</h2>
+<a href="/admin/boat/add">Add a Boat</a>
+<table>
+    <tr>
+        <th>Boat Name</th>
+        <th>Boat Length</th>
+        <th>Boat Year</th>
+        <th>Boat Capacity</th>
+        <th>Boat Pic</th>
+        <th></th>
+    </tr>
+    {{#each boats}}
+        <tr>
+            <td headers="name">{{this.boatname}}</td>
+            <td headers="name">{{this.boatlengthinfeet}}</td>
+            <td headers="name">{{this.boatyear}}</td>
+            <td headers="name">{{this.boatcapacityinpeople}}</td>
+            <td headers="name"><img src="{{this.boatpictureurl}}" width="100px"></td>
+            <td>
+                <button><a href="/admin/boats/{{this._id}}">Edit</a></button>
+                <button><a href="/admin/boat/delete/{{this._id}}">Delete</a></button>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+<a href="/admin">Back to admin's dashboard</a>

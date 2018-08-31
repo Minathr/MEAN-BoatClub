@@ -1,0 +1,16 @@
+<div class="container">
+<h2 class="page-header">Users List</h2>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    {{#each usersInfo}}
+        <tr>
+            <td headers="name">{{this.username}}</td>
+            <td headers="name">{{this.password}}</td>
+        </tr>
+    {{/each}}
+</table>
+<a href="/admin">Back to admin's dashboard</a>
+</div>

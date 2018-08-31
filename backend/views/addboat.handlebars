@@ -1,0 +1,32 @@
+<h2 class="page-header">Add a Boat</h2>
+
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+<form method="post" action="/admin/boat/add">
+    <div class="form-group">
+        <label>Boat Name</label>
+        <input class="form-control" placeholder="Name" name="boatname" />
+    </div>
+    <div class="form-group">
+        <label>Boat Length (in ft)</label>
+        <input class="form-control" placeholder="Length" name="boatlengthinfeet" />
+    </div>
+    <div class="form-group">
+        <label>Boat Year</label>
+        <input class="form-control" placeholder="Year" name="boatyear" />
+    </div>
+    <div class="form-group">
+        <label>Boat Capacity</label>
+        <input class="form-control" placeholder="Capacity" name="boatcapacityinpeople" />
+    </div>
+    <div class="form-group">
+        <label>Boat Pic url</label>
+        <input class="form-control" placeholder="url" name="boatpictureurl" />
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+</form>
+<a href="/admin/boats">Back to boats list</a>
